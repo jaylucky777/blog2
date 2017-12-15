@@ -1,0 +1,48 @@
+---
+title: barplot
+author: Jay
+date: '2017-12-15'
+slug: barplot
+categories: []
+tags: []
+---
+
+
+
+<p>I learned how to make a barplot today. It’s a nice way of visualizing data.</p>
+<div id="step-1-implement-the-needed-packages" class="section level2">
+<h2>Step 1: Implement the Needed Packages</h2>
+<p>Time to drop in the required packages</p>
+<pre class="r"><code>library(Lahman)</code></pre>
+<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.3</code></pre>
+<pre class="r"><code>library(sqldf)</code></pre>
+<pre><code>## Warning: package &#39;sqldf&#39; was built under R version 3.4.3</code></pre>
+<pre><code>## Loading required package: gsubfn</code></pre>
+<pre><code>## Loading required package: proto</code></pre>
+<pre><code>## Loading required package: RSQLite</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.3</code></pre>
+</div>
+<div id="step-2-extract-the-data" class="section level2">
+<h2>Step 2: Extract the Data</h2>
+<p>We pull out the homeruns from the teams table of the lahman library. Then order all the homeruns in ascending order from in the year 1980</p>
+<pre class="r"><code>query&lt;-&quot;SELECT name,HR
+FROM Teams
+WHERE yearID=1980
+ORDER BY HR&quot;
+
+result&lt;-sqldf(query)
+
+result$name&lt;-factor(result$name,levels=result$name)</code></pre>
+</div>
+<div id="step-3-visualize-the-data" class="section level2">
+<h2>Step 3: Visualize the Data</h2>
+<p>Now we visualize the date in the bar plot</p>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat=&#39;identity&#39;,color=&#39;blue&#39;,fill=&#39;white&#39;)+
+  coord_flip()+
+  ylab(&quot;homeruns&quot;)+
+  xlab(&quot;team&quot;)+
+  ggtitle(&quot;1980 Team Homeruns Distribution&quot;)</code></pre>
+<p><img src="/post/2017-12-15-barplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>

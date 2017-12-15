@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jay&#39;s blog</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Jay&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Fri, 15 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>barplot</title>
+      <link>/post/barplot/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/barplot/</guid>
+      <description>I learned how to make a barplot today. It’s a nice way of visualizing data.
+Step 1: Implement the Needed PackagesTime to drop in the required packages
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.3library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.3## Loading required package: gsubfn## Loading required package: proto## Loading required package: RSQLitelibrary(ggplot2)## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
+      <title>histogram</title>
+      <link>/post/histogram/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/histogram/</guid>
+      <description>Today I learned how to make a histogram. It was an interesting look as to how extracted data can be displayed.</description>
+    </item>
+    
+    <item>
+      <title>scatterplots</title>
+      <link>/post/scatterplots/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/scatterplots/</guid>
+      <description>I learned how to make scatter plots the other day utilizing the ggplot2 tool. I initially had some issues but quickly remedied the situation. A missing library was one of them, namely being miniUI. In short, it&amp;rsquo;s an interesting field so far and I may pursue further education in this field.</description>
+    </item>
+    
+    <item>
+      <title>timeseries</title>
+      <link>/post/timeseries/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/timeseries/</guid>
+      <description>Time series plots are interesting data visualizations where you can match values over a period fo time.
+Step 1: Implement all PackagesInstall all the required packages such as lahman, sqldf, and ggplot2
+library(Lahman)## Warning: package &amp;#39;Lahman&amp;#39; was built under R version 3.4.3library(sqldf)## Warning: package &amp;#39;sqldf&amp;#39; was built under R version 3.4.3## Loading required package: gsubfn## Loading required package: proto## Loading required package: RSQLitelibrary(ggplot2)## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 3.</description>
+    </item>
+    
+    <item>
+      <title>timeseries</title>
+      <link>/post/timeseries/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/timeseries/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

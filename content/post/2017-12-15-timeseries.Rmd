@@ -1,0 +1,52 @@
+---
+title: timeseries
+author: Jay
+date: '2017-12-15'
+slug: timeseries
+categories: []
+tags: []
+---
+
+
+Time series plots are interesting data visualizations where you can match values over a period fo time.
+
+## Step 1: Implement all Packages
+
+Install all the required packages such as lahman, sqldf, and ggplot2
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+
+## Step 2: Extract the Data
+
+in the lahman library we pull the playerID of Babe Ruth from the Batting table.
+
+```{r}
+query<-"SELECT yearID,HR
+FROM Batting 
+WHERE playerID='ruthba01'"
+
+result<-sqldf(query)
+
+```
+
+
+## Step 3: Visualize the Data
+
+This is where it gets interesting.  We will now build the time series plot with the extracted data.
+
+```{r}
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR),color="red")+
+  geom_line(data=result,aes(x=yearID,y=HR),color="blue")+
+  ggtitle("Year and Homeruns of Babe Ruth")+
+  xlab("year")+
+  ylab("Homeruns")
+
+
+```
+
